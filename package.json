@@ -1,4 +1,8 @@
 {
+  "name": "razertest",
+  "version": "1.0.0",
+  "description": "Razer Test",
+  "main": "index.js",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
@@ -6,6 +10,7 @@
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "prettier --check \"src/**/*.{ts,js}\""
   },
+  "author": "LUI KAR KIT <karkit1005@gmail.com>",
   "dependencies": {
     "@types/web-locks-api": "^0.0.1",
     "canvas-confetti": "^1.2.0"
