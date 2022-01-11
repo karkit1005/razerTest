@@ -1,24 +1,7 @@
-# New Project
+## Razer Test
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+### Question 1C - 3 lock_holder.html pages are running in 3 tabs, describe the lock request/lock release behavior
+Answer - When the lock request is executed, only the first tab open in the same origin will execute the code. Others tab will wait until the previous tab’s lock is release, then the next tab will execute the code.
 
-## Available Scripts
-
-### npm start
-
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
-
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+### Question 1D - steal the lock from lock holder, and show that how lock holder knows its lock got stolen?
+Answer - When load the lock_thief.html, the lock_holder.html where get lock will have an error - Uncaught (in promise) DOMException: Lock broken by another request with the 'steal' option.
