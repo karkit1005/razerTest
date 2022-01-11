@@ -17,7 +17,7 @@ class ADBObjectStore {
     this.databaseName = databaseName;
   }
 
-  public async createDatabase(database_schema: any, records: any) {
+  public async createDatabase(database_schema: any, records: any): Promise<IDBOpenDBRequest> {
     const { version, objectStores } = database_schema;
 
     let request = indexedDB.open(this.databaseName, version);
@@ -45,10 +45,8 @@ class ADBObjectStore {
       };
     };
 
-    return Promise.resolve();
+    return request;
   }
-
-  public async addRecord(records: any) {}
 }
 
 const database = {
