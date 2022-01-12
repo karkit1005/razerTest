@@ -24,10 +24,7 @@ class ADBObjectStore {
     request.onupgradeneeded = (event) => {
       let db = request.result;
 
-      const name = objectStores[0].name;
-      const keyPath = objectStores[0].keyPath;
-      const autoIncrement = objectStores[0].autoIncrement;
-      const indexes = objectStores[0].indexes;
+      const [{name, keyPath, autoIncrement, indexes}] = objectStores;
 
       let objectStore = db.createObjectStore(name, { keyPath, autoIncrement });
       indexes.forEach((index: any) =>
